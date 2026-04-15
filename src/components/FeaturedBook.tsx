@@ -30,7 +30,7 @@ const FeaturedBook = () => {
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-2">
             A Última Guardiã de <span className="text-gold-gradient">Camões</span>
           </h2>
-          <p className="font-elegant text-lg text-foreground/50 italic">Romance Histórico de Vanessa Clasen</p>
+          <p className="font-elegant text-lg text-foreground/50 italic">Escrito à mão, com a delicadeza de quem tece o tempo em cada linha.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
