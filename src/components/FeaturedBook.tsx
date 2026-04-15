@@ -1,15 +1,19 @@
-import bookGuardia from "@/assets/book-guardia.jpg";
-import bgGuardia from "@/assets/book-bg-guardia.jpg";
+import coverGuardia from "@/assets/cover-guardia.jpg";
+import videoGuardia from "@/assets/video-guardia.mp4.asset.json";
 import quill from "@/assets/quill-divider.png";
 
 const FeaturedBook = () => {
   return (
     <section id="premiado" className="relative py-24 overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bgGuardia})` }}
+      <video
+        src={videoGuardia.url}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 section-overlay-strong" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(30_20%_5%/0.90)] via-[hsl(35_15%_8%/0.82)] to-[hsl(30_10%_5%/0.72)]" />
 
       <div className="relative z-10 container mx-auto px-6">
         <div className="quill-divider">
@@ -34,12 +38,10 @@ const FeaturedBook = () => {
             <div className="relative">
               <div className="absolute -inset-3 bg-gold-gradient rounded-sm opacity-20 blur-xl" />
               <img
-                src={bookGuardia}
+                src={coverGuardia}
                 alt="A Última Guardiã de Camões"
                 className="relative w-64 md:w-80 shadow-2xl rounded-sm"
                 loading="lazy"
-                width={600}
-                height={900}
               />
             </div>
           </div>

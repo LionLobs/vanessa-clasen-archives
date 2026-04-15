@@ -1,9 +1,9 @@
-import bookSombras from "@/assets/book-sombras.jpg";
-import bookMar from "@/assets/book-mar.jpg";
-import bookGuardia from "@/assets/book-guardia.jpg";
-import bgSombras from "@/assets/book-bg-sombras.jpg";
-import bgMar from "@/assets/book-bg-mar.jpg";
-import bgGuardia from "@/assets/book-bg-guardia.jpg";
+import coverSombras from "@/assets/cover-sombras.jpg";
+import coverMar from "@/assets/cover-mar.jpg";
+import coverGuardia from "@/assets/cover-guardia.jpg";
+import videoSombras from "@/assets/video-sombras.mp4.asset.json";
+import videoMar from "@/assets/video-mar.mp4.asset.json";
+import videoGuardia from "@/assets/video-guardia.mp4.asset.json";
 import quill from "@/assets/quill-divider.png";
 import { useState } from "react";
 
@@ -12,9 +12,9 @@ const books = [
     id: "sombras",
     title: "Nas Sombras da Lembrança",
     genre: "Suspense Psicológico",
-    cover: bookSombras,
-    bg: bgSombras,
-    borderColor: "border-gold",
+    cover: coverSombras,
+    video: videoSombras.url,
+    overlayClass: "bg-gradient-to-r from-[hsl(0_0%_3%/0.92)] via-[hsl(0_0%_5%/0.85)] to-[hsl(0_0%_3%/0.75)]",
     synopsis:
       "Alguns segredos deveriam ficar guardados para sempre... Um suspense psicológico que mergulha nas profundezas da memória, onde lembranças esquecidas podem ser mais perigosas do que a verdade.",
   },
@@ -22,9 +22,9 @@ const books = [
     id: "mar",
     title: "O Mar Sempre Devolve Seus Mortos",
     genre: "Suspense Policial",
-    cover: bookMar,
-    bg: bgMar,
-    borderColor: "border-accent",
+    cover: coverMar,
+    video: videoMar.url,
+    overlayClass: "bg-gradient-to-r from-[hsl(0_50%_5%/0.90)] via-[hsl(0_40%_8%/0.82)] to-[hsl(0_30%_5%/0.75)]",
     synopsis:
       "O mar guarda segredos que nenhuma maré consegue apagar. Um suspense policial visceral ambientado no litoral brasileiro, onde cada onda traz à tona verdades enterradas e destinos cruzados.",
   },
@@ -32,9 +32,9 @@ const books = [
     id: "guardia",
     title: "A Última Guardiã de Camões",
     genre: "Romance Histórico",
-    cover: bookGuardia,
-    bg: bgGuardia,
-    borderColor: "border-primary",
+    cover: coverGuardia,
+    video: videoGuardia.url,
+    overlayClass: "bg-gradient-to-r from-[hsl(30_20%_5%/0.88)] via-[hsl(35_15%_8%/0.80)] to-[hsl(30_10%_5%/0.70)]",
     synopsis:
       "Manuscritos esquecidos, heranças ocultas e segredos literários se entrelaçam neste romance histórico premiado que atravessa o tempo — revelando que algumas verdades jamais deixam de existir.",
     award: "🏆 1º lugar — FLIPoços",
@@ -47,12 +47,25 @@ const BooksSection = () => {
 
   return (
     <section id="obras" className="relative py-24 overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000"
-        style={{ backgroundImage: `url(${book.bg})` }}
-        key={book.id}
-      />
-      <div className="absolute inset-0 section-overlay-strong" />
+      {/* Video backgrounds - all rendered, only active one visible */}
+      {books.map((b, i) => (
+        <div
+          key={b.id}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            activeBook === i ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <video
+            src={b.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className={`absolute inset-0 ${b.overlayClass}`} />
+        </div>
+      ))}
 
       <div className="relative z-10 container mx-auto px-6">
         <div className="quill-divider">
@@ -89,20 +102,18 @@ const BooksSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <div className="flex justify-center">
             <div className="relative">
-              <div className="absolute -inset-3 bg-gold-gradient rounded-sm opacity-15 blur-xl" />
+              <div className="absolute -inset-3 bg-gold-gradient rounded-sm opacity-20 blur-xl" />
               <img
                 src={book.cover}
                 alt={book.title}
-                className={`relative w-56 md:w-72 shadow-2xl rounded-sm border-2 ${book.borderColor} transition-all duration-500`}
+                className="relative w-56 md:w-72 shadow-2xl rounded-sm transition-all duration-500"
                 loading="lazy"
-                width={600}
-                height={900}
               />
             </div>
           </div>
 
           <div className="space-y-5">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap">
               <span className="font-elegant text-sm uppercase tracking-widest text-primary">
                 {book.genre}
               </span>
