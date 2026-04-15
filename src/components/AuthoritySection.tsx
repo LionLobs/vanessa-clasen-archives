@@ -47,7 +47,7 @@ const AuthoritySection = () => {
         </div>
 
         <p className="text-center font-elegant text-lg text-foreground/50 italic">
-          Uma trajetória que une sensibilidade literária e impacto narrativo.
+          Cada manuscrito nasce à mão — a tinta encontra o papel antes de encontrar o mundo.
         </p>
       </div>
     </section>

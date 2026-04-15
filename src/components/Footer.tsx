@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="text-center mb-10">
           <img src={logo} alt="Vanessa Clasen" className="h-16 mx-auto mb-6" />
           <p className="font-elegant text-lg text-foreground/50 italic max-w-md mx-auto">
-            Escritora e jornalista. Suspense psicológico e narrativas que atravessam memória, silêncio e destino.
+            Escritora e jornalista — cada história nasce à mão, em tinta e alma, antes de ganhar o mundo.
           </p>
         </div>
 

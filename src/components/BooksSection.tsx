@@ -24,7 +24,7 @@ const books = [
     genre: "Suspense Policial",
     cover: coverMar,
     video: videoMar.url,
-    overlayClass: "bg-gradient-to-r from-[hsl(0_50%_5%/0.90)] via-[hsl(0_40%_8%/0.82)] to-[hsl(0_30%_5%/0.75)]",
+    overlayClass: "bg-gradient-to-r from-[hsl(0_60%_8%/0.92)] via-[hsl(355_50%_12%/0.85)] to-[hsl(0_45%_8%/0.78)]",
     synopsis:
       "O mar guarda segredos que nenhuma maré consegue apagar. Um suspense policial visceral ambientado no litoral brasileiro, onde cada onda traz à tona verdades enterradas e destinos cruzados.",
   },
@@ -77,7 +77,7 @@ const BooksSection = () => {
             As <span className="text-gold-gradient">Obras</span>
           </h2>
           <p className="font-elegant text-lg text-foreground/50 italic">
-            Três narrativas que desafiam o silêncio
+            Escritas à mão, palavra por palavra — como quem borда destinos em papel antigo.
           </p>
         </div>
 

@@ -10,57 +10,40 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 section-overlay-strong" />
       
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
         <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <img
             src={quill}
             alt=""
-            className="w-16 h-16 mx-auto mb-8 opacity-70"
+            className="w-14 h-14 mx-auto mb-10 opacity-60"
             width={512}
             height={512}
           />
         </div>
 
         <h1
-          className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up"
+          className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          <span className="text-foreground">"Nas sombras, a guardiã das palavras sempre devolve a </span>
-          <span className="text-gold-gradient">verdade.</span>
-          <span className="text-foreground">"</span>
+          <span className="text-foreground">Vanessa </span>
+          <span className="text-gold-gradient">Clasen</span>
         </h1>
 
         <p
-          className="font-elegant text-xl md:text-2xl text-foreground/60 italic mb-4 animate-fade-up"
+          className="font-elegant text-xl md:text-2xl text-foreground/50 italic mb-12 animate-fade-up leading-relaxed"
           style={{ animationDelay: "0.6s" }}
         >
-          — Vanessa Clasen
-        </p>
-
-        <p
-          className="font-body text-base md:text-lg text-foreground/70 mb-4 max-w-2xl mx-auto animate-fade-up"
-          style={{ animationDelay: "0.7s" }}
-        >
-          Suspense psicológico e narrativas literárias que atravessam memória, silêncio e destino.
+          Cada palavra nasce à mão, em tinta e silêncio —<br />
+          como quem escreve cartas que o tempo nunca apaga.
         </p>
 
         <div
-          className="inline-flex items-center gap-2 bg-muted/50 border border-primary/30 rounded-full px-5 py-2 mb-10 animate-fade-up"
-          style={{ animationDelay: "0.8s" }}
-        >
-          <span className="text-lg">🏆</span>
-          <span className="font-body text-sm text-primary font-medium">
-            1º lugar no Festival Literário Internacional de Poços de Caldas — FLIPoços
-          </span>
-        </div>
-
-        <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-fade-up"
-          style={{ animationDelay: "1s" }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-up"
+          style={{ animationDelay: "0.9s" }}
         >
           <a
             href="#capitulo"
-            className="w-full sm:w-auto border-2 border-gold px-8 py-4 font-heading text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
+            className="w-full sm:w-auto border border-primary/40 px-8 py-4 font-heading text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
           >
             📖 Leia o Primeiro Capítulo
           </a>
@@ -73,8 +56,8 @@ const HeroSection = () => {
         </div>
 
         <p
-          className="font-elegant text-sm text-foreground/40 italic animate-fade-up"
-          style={{ animationDelay: "1.1s" }}
+          className="font-elegant text-sm text-foreground/30 italic animate-fade-up"
+          style={{ animationDelay: "1s" }}
         >
           Edição especial em pré-reserva.
         </p>
