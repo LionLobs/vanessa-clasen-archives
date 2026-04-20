@@ -1,5 +1,6 @@
 import quill from "@/assets/quill-divider.png";
 import logo from "@/assets/logo-vanessa.jpg";
+import { Instagram, Facebook, Mail, BookOpen } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,14 +17,20 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex justify-center gap-6 mb-10">
-          {["Instagram", "Facebook", "Amazon"].map((social) => (
+        <div className="flex justify-center gap-4 mb-10">
+          {[
+            { icon: Instagram, label: "Instagram", href: "#" },
+            { icon: Facebook, label: "Facebook", href: "#" },
+            { icon: BookOpen, label: "Amazon", href: "#" },
+            { icon: Mail, label: "E-mail", href: "#reservar" },
+          ].map(({ icon: Icon, label, href }) => (
             <a
-              key={social}
-              href="#"
-              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors tracking-wider uppercase"
+              key={label}
+              href={href}
+              aria-label={label}
+              className="w-11 h-11 flex items-center justify-center border border-border rounded-full text-foreground/60 hover:text-primary hover:border-primary/60 hover:shadow-gold transition-all"
             >
-              {social}
+              <Icon className="w-4 h-4" strokeWidth={1.5} />
             </a>
           ))}
         </div>
