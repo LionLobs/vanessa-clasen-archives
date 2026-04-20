@@ -36,13 +36,22 @@ const FeaturedBook = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <div className="flex justify-center">
             <div className="relative">
-              <div className="absolute -inset-3 bg-gold-gradient rounded-sm opacity-20 blur-xl" />
-              <img
-                src={coverGuardia}
-                alt="A Última Guardiã de Camões"
-                className="relative w-64 md:w-80 shadow-2xl rounded-sm"
-                loading="lazy"
-              />
+              <div className="absolute -inset-6 bg-gold-gradient rounded-sm opacity-20 blur-2xl" />
+              <div className="book-mockup w-64 md:w-80">
+                <div className="book-mockup__inner">
+                  <div className="book-mockup__back" />
+                  <div className="book-mockup__pages" />
+                  <img
+                    src={coverGuardia}
+                    alt="A Última Guardiã de Camões"
+                    className="book-mockup__cover"
+                    loading="lazy"
+                  />
+                  <div className="book-mockup__spine" />
+                  <div className="book-mockup__gloss" />
+                </div>
+                <div className="book-mockup__reflection" />
+              </div>
             </div>
           </div>
 
