@@ -102,13 +102,22 @@ const BooksSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <div className="flex justify-center">
             <div className="relative">
-              <div className="absolute -inset-3 bg-gold-gradient rounded-sm opacity-20 blur-xl" />
-              <img
-                src={book.cover}
-                alt={book.title}
-                className="relative w-56 md:w-72 shadow-2xl rounded-sm transition-all duration-500"
-                loading="lazy"
-              />
+              <div className="absolute -inset-6 bg-gold-gradient rounded-sm opacity-20 blur-2xl" />
+              <div className="book-mockup w-56 md:w-72">
+                <div className="book-mockup__inner">
+                  <div className="book-mockup__back" />
+                  <div className="book-mockup__pages" />
+                  <img
+                    src={book.cover}
+                    alt={book.title}
+                    className="book-mockup__cover"
+                    loading="lazy"
+                  />
+                  <div className="book-mockup__spine" />
+                  <div className="book-mockup__gloss" />
+                </div>
+                <div className="book-mockup__reflection" />
+              </div>
             </div>
           </div>
 
