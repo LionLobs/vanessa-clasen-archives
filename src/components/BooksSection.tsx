@@ -82,18 +82,22 @@ const BooksSection = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-2 mb-16 flex-wrap">
+        <div className="flex justify-center gap-3 mb-16 flex-wrap max-w-4xl mx-auto">
           {books.map((b, i) => (
             <button
               key={b.id}
               onClick={() => setActiveBook(i)}
-              className={`px-6 py-3 font-heading text-sm tracking-wider uppercase transition-all rounded-sm ${
+              className={`group flex items-center gap-3 px-5 py-3 font-heading text-xs md:text-sm tracking-wider uppercase transition-all rounded-sm ${
                 activeBook === i
                   ? "bg-gold-gradient text-primary-foreground shadow-gold"
                   : "border border-border text-foreground/60 hover:border-primary/50 hover:text-primary"
               }`}
             >
-              {b.title.split(" ").slice(0, 3).join(" ")}…
+              <span className={`font-elegant text-base normal-case italic ${activeBook === i ? "text-primary-foreground/80" : "text-primary/70"}`}>
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="hidden sm:inline">{b.title}</span>
+              <span className="sm:hidden">{b.title.split(" ").slice(0, 2).join(" ")}…</span>
             </button>
           ))}
         </div>
