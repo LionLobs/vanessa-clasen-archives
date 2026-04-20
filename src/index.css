@@ -130,6 +130,97 @@
     animation: fadeIn 1s ease-out forwards;
     opacity: 0;
   }
+
+  /* ===== Professional 3D Book Mockup ===== */
+  .book-mockup {
+    perspective: 1800px;
+    perspective-origin: 50% 50%;
+    display: inline-block;
+  }
+  .book-mockup__inner {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-26deg) rotateX(4deg);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+  .book-mockup:hover .book-mockup__inner {
+    transform: rotateY(-12deg) rotateX(2deg);
+  }
+  .book-mockup__cover {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px 6px 6px 2px;
+    box-shadow:
+      0 1px 0 hsl(40 30% 12%),
+      0 6px 20px -6px hsl(0 0% 0% / 0.5),
+      0 30px 60px -20px hsl(0 0% 0% / 0.7);
+  }
+  .book-mockup__pages {
+    position: absolute;
+    top: 1.5%;
+    right: 0;
+    width: 22px;
+    height: 97%;
+    transform: translateX(21px) rotateY(90deg);
+    transform-origin: left center;
+    background: repeating-linear-gradient(
+      to right,
+      hsl(40 25% 88%) 0px,
+      hsl(40 20% 78%) 1px,
+      hsl(40 30% 92%) 2px
+    );
+    border-radius: 0 1px 1px 0;
+    box-shadow: inset -2px 0 4px hsl(40 20% 60% / 0.4);
+  }
+  .book-mockup__back {
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-22px);
+    background: linear-gradient(135deg, hsl(20 15% 8%), hsl(20 10% 4%));
+    border-radius: 2px 6px 6px 2px;
+  }
+  .book-mockup__spine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0.45) 0%,
+      hsl(0 0% 0% / 0.15) 40%,
+      hsl(0 0% 100% / 0.05) 70%,
+      transparent 100%
+    );
+    pointer-events: none;
+    border-radius: 2px 0 0 2px;
+  }
+  .book-mockup__gloss {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      hsl(0 0% 100% / 0.08) 45%,
+      transparent 60%
+    );
+    pointer-events: none;
+    border-radius: 2px 6px 6px 2px;
+    mix-blend-mode: overlay;
+  }
+  .book-mockup__reflection {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: -28px;
+    height: 40px;
+    background: radial-gradient(ellipse at center, hsl(0 0% 0% / 0.55), transparent 70%);
+    filter: blur(8px);
+    pointer-events: none;
+  }
 }
 
 @keyframes fadeUp {
