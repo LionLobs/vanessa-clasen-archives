@@ -8,7 +8,7 @@ const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 
 const FeaturedBook = () => {
   return (
-    <section id="premiado" className="relative py-24 overflow-hidden">
+    <section id="premiado" className="relative py-16 md:py-20 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${coverGuardia})` }}
@@ -26,22 +26,22 @@ const FeaturedBook = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(30_20%_5%/0.90)] via-[hsl(35_15%_8%/0.82)] to-[hsl(30_10%_5%/0.72)]" />
 
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 container mx-auto px-5 md:px-6">
         <div className="quill-divider">
-          <img src={quill} alt="" className="w-10 h-10 opacity-60" loading="lazy" />
+          <img src={quill} alt="" className="w-8 h-8 opacity-60" loading="lazy" />
         </div>
 
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-6 py-2 mb-6">
-            <span className="text-lg">🏆</span>
-            <span className="font-body text-sm text-primary font-semibold">
+        <div className="text-center mb-8 md:mb-10">
+          <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-4 md:px-5 py-1.5 mb-4">
+            <span className="text-base">🏆</span>
+            <span className="font-body text-xs md:text-sm text-primary font-semibold">
               1º lugar — 4° Prêmio FLIPoços para Escritores Independentes
             </span>
           </div>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-2">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground mb-2">
             A Última Guardiã de <span className="text-gold-gradient">Camões</span>
           </h2>
-          <p className="font-elegant text-lg text-foreground/50 italic">Escrito à mão, com a delicadeza de quem tece o tempo em cada linha.</p>
+          <p className="font-elegant text-sm md:text-base text-foreground/50 italic">Escrito à mão, com a delicadeza de quem tece o tempo em cada linha.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">

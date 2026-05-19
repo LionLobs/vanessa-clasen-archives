@@ -30,7 +30,7 @@ const HeroSection = () => {
         </h1>
 
         <p
-          className="font-elegant text-xl md:text-2xl text-foreground/50 italic mb-12 animate-fade-up leading-relaxed"
+          className="font-elegant text-base sm:text-lg md:text-xl text-foreground/55 italic mb-8 md:mb-10 animate-fade-up leading-relaxed"
           style={{ animationDelay: "0.6s" }}
         >
           Cada palavra nasce à mão, em tinta e silêncio —<br />
@@ -38,20 +38,22 @@ const HeroSection = () => {
         </p>
 
         <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-up"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-6 animate-fade-up"
           style={{ animationDelay: "0.9s" }}
         >
           <a
             href="#capitulo"
-            className="w-full sm:w-auto border border-primary/40 px-8 py-4 font-heading text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
+            className="w-full sm:w-auto border border-primary/40 px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
           >
-            📖 Leia o Primeiro Capítulo
+            📖 Primeiro Capítulo
           </a>
           <a
-            href="#premiado"
-            className="w-full sm:w-auto bg-gold-gradient px-8 py-4 font-heading text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
+            href="https://benfeitoria.com/aultimaguardiadecamoes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-gold-gradient px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
           >
-            🏆 Reserve o Livro Premiado
+            🏆 Reservar Pré-venda
           </a>
         </div>
 
