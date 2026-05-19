@@ -412,6 +412,11 @@
   to { transform: translateX(-100%); }
 }
 
+@keyframes heroKenBurns {
+  0% { transform: scale(1.08) translate3d(0, 0, 0); }
+  100% { transform: scale(1.16) translate3d(-1.5%, -1%, 0); }
+}
+
 html {
   scroll-behavior: smooth;
 }
