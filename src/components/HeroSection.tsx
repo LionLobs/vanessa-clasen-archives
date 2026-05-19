@@ -9,31 +9,31 @@ const HeroSection = () => {
       id="inicio"
       className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16 bg-background"
     >
-      {/* Foto da Vanessa — à direita no desktop, topo no mobile */}
+      {/* Foto de fundo da Vanessa */}
       <div
-        className="absolute inset-y-0 right-0 left-0 md:left-1/2 bg-no-repeat bg-cover bg-[position:55%_top] md:bg-[position:center_top] md:bg-[length:cover]"
-        style={{ backgroundImage: `url(${vanessaPortrait})`, backgroundSize: "cover" }}
+        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:55%_top] md:bg-[position:right_top] md:bg-[length:auto_110%]"
+        style={{ backgroundImage: `url(${vanessaPortrait})` }}
         aria-hidden
       />
 
-      {/* Mobile: escurece o fundo inteiro para o texto ficar legível */}
-      <div className="absolute inset-0 bg-background/82 md:hidden" aria-hidden />
+      {/* Mobile: escurece um pouco o fundo para legibilidade */}
+      <div className="absolute inset-0 bg-background/55 md:hidden" aria-hidden />
 
-      {/* Desktop: fade suave somente na borda esquerda da foto, sem cobrir o rosto */}
+      {/* Desktop: gradiente suave da esquerda → transparente para revelar a foto à direita */}
       <div
-        className="hidden md:block absolute inset-y-0 left-1/2 w-48 bg-gradient-to-r from-background to-transparent"
+        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background/75 from-20% via-background/45 via-55% to-transparent to-85%"
         aria-hidden
       />
 
-      {/* Vinheta sutil nas bordas */}
+      {/* Vinheta cinematográfica nas bordas */}
       <div
-        className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(0_0%_0%/0.55)_100%)]"
+        className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_50%,hsl(0_0%_0%/0.55)_100%)]"
         aria-hidden
       />
 
       {/* Brilho dourado quente atrás da foto */}
       <div
-        className="hidden md:block absolute inset-y-0 right-0 left-1/2 pointer-events-none bg-[radial-gradient(ellipse_at_70%_45%,hsl(var(--primary)/0.18)_0%,transparent_60%)] mix-blend-screen"
+        className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_80%_45%,hsl(var(--primary)/0.18)_0%,transparent_55%)] mix-blend-screen"
         aria-hidden
       />
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
       <div className="relative z-10 container mx-auto px-5 md:px-6">
-        <div className="max-w-md lg:max-w-lg text-left md:pr-8">
+        <div className="max-w-xl lg:max-w-2xl text-left">
           <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-3 md:px-4 py-1 mb-5 animate-fade-up backdrop-blur-sm">
             <span className="text-sm">🏆</span>
             <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase">
