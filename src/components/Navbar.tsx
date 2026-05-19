@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo-vanessa.png";
 import quill from "@/assets/quill-divider.png";
 
 const Navbar = () => {
@@ -27,8 +26,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3">
-          <img src={logo} alt="Vanessa Clasen" className="h-12 w-auto" />
+        <a href="#inicio" className="flex items-center gap-2.5" aria-label="Vanessa Clasen">
+          <img src={quill} alt="" className="h-7 w-7 md:h-8 md:w-8 opacity-90" loading="lazy" />
+          <span className="font-heading text-base md:text-lg tracking-[0.18em] uppercase text-gold-gradient">
+            Vanessa Clasen
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
