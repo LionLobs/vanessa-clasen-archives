@@ -56,6 +56,15 @@ export default {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
+          deep: "hsl(var(--gold-deep))",
+        },
+        parchment: {
+          DEFAULT: "hsl(var(--parchment))",
+          dim: "hsl(var(--parchment-dim))",
+        },
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          deep: "hsl(var(--ink-deep))",
         },
         burgundy: {
           DEFAULT: "hsl(var(--burgundy))",
@@ -87,10 +96,35 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(24px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
+          "50%": { opacity: "0.85", transform: "scale(1.05)" },
+        },
+        "audio-bar": {
+          "0%, 100%": { transform: "scaleY(0.4)" },
+          "50%": { transform: "scaleY(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "glow-pulse": "glow-pulse 4s ease-in-out infinite",
+        "audio-bar": "audio-bar 0.8s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-ink": "var(--gradient-ink)",
+        "gradient-vignette": "var(--gradient-vignette)",
+      },
+      boxShadow: {
+        page: "var(--shadow-page)",
+        gold: "var(--shadow-gold)",
+        deep: "var(--shadow-deep)",
       },
     },
   },
