@@ -3,26 +3,26 @@ import quill from "@/assets/quill-divider.png";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 section-overlay-strong" />
       
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+      <div className="relative z-10 container mx-auto px-5 md:px-6 text-center max-w-3xl py-20">
         <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <img
             src={quill}
             alt=""
-            className="w-14 h-14 mx-auto mb-10 opacity-60"
+            className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-6 md:mb-8 opacity-60"
             width={512}
             height={512}
           />
         </div>
 
         <h1
-          className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 animate-fade-up"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
           <span className="text-foreground">Vanessa </span>
@@ -30,7 +30,7 @@ const HeroSection = () => {
         </h1>
 
         <p
-          className="font-elegant text-xl md:text-2xl text-foreground/50 italic mb-12 animate-fade-up leading-relaxed"
+          className="font-elegant text-base sm:text-lg md:text-xl text-foreground/55 italic mb-8 md:mb-10 animate-fade-up leading-relaxed"
           style={{ animationDelay: "0.6s" }}
         >
           Cada palavra nasce à mão, em tinta e silêncio —<br />
@@ -38,20 +38,22 @@ const HeroSection = () => {
         </p>
 
         <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-up"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-6 animate-fade-up"
           style={{ animationDelay: "0.9s" }}
         >
           <a
             href="#capitulo"
-            className="w-full sm:w-auto border border-primary/40 px-8 py-4 font-heading text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
+            className="w-full sm:w-auto border border-primary/40 px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
           >
-            📖 Leia o Primeiro Capítulo
+            📖 Primeiro Capítulo
           </a>
           <a
-            href="#premiado"
-            className="w-full sm:w-auto bg-gold-gradient px-8 py-4 font-heading text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
+            href="https://benfeitoria.com/aultimaguardiadecamoes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-gold-gradient px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
           >
-            🏆 Reserve o Livro Premiado
+            🏆 Reservar Pré-venda
           </a>
         </div>
 
