@@ -1,4 +1,3 @@
-import heroBg from "@/assets/hero-bg.jpg";
 import quill from "@/assets/quill-divider.png";
 import vanessaPortrait from "@/assets/vanessa-portrait.jpg";
 
