@@ -1,4 +1,3 @@
-import coverGuardia from "@/assets/cover-guardia.jpg";
 import mockupGuardia from "@/assets/mockup-guardia.png";
 import mapGuardia from "@/assets/map-guardia.png";
 import quill from "@/assets/quill-divider.png";
