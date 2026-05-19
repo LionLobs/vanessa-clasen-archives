@@ -42,12 +42,15 @@ const FeaturedBook = () => {
         </div>
 
         {/* Mockup hero — transparente, sem corte seco */}
-        <div className="relative max-w-6xl mx-auto mb-10 md:mb-14">
-          <div className="absolute inset-x-10 -bottom-6 h-24 bg-gold-gradient opacity-15 blur-[80px] rounded-full pointer-events-none" aria-hidden />
+        <div className="relative max-w-sm md:max-w-md mx-auto mb-10 md:mb-14">
+          {/* Halo dourado atrás da capa */}
+          <div className="absolute -inset-8 bg-gold-gradient opacity-20 blur-[100px] rounded-full pointer-events-none" aria-hidden />
+          {/* Moldura sutil dourada */}
+          <div className="absolute -inset-1 bg-gradient-to-br from-primary/40 via-transparent to-primary/40 rounded-sm blur-sm pointer-events-none" aria-hidden />
           <img
             src={mockupGuardia}
-            alt="Edição especial de colecionador — A Última Guardiã de Camões, capa dura, papel pólen 90g, fita de cetim dourada"
-            className="relative w-full mx-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.55)]"
+            alt="Capa do livro A Última Guardiã de Camões, de Vanessa Clasen"
+            className="relative w-full mx-auto rounded-sm shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] border border-primary/20"
             loading="lazy"
           />
         </div>
