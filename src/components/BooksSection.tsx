@@ -184,7 +184,7 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
               >
                 {book.id === "guardia" ? "Reservar na Pré-venda →" : "Conhecer este livro →"}
               </a>
-              <SpotifyEmbed spotifyId={book.spotify.id} kind={book.spotify.kind} label={`Trilha de ${book.title}`} />
+              <SpotifyEmbed spotifyId={book.spotify.id} kind={book.spotify.kind} label={`Trilha de ${book.title}`} active={visible} />
             </div>
           </div>
         </div>
