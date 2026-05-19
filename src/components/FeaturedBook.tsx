@@ -1,6 +1,10 @@
 import coverGuardia from "@/assets/cover-guardia.jpg";
+import mockupGuardia from "@/assets/mockup-guardia.png";
+import mapGuardia from "@/assets/map-guardia.png";
 import videoGuardia from "@/assets/video-guardia.mp4.asset.json";
 import quill from "@/assets/quill-divider.png";
+
+const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 
 const FeaturedBook = () => {
   return (
@@ -42,23 +46,14 @@ const FeaturedBook = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <div className="flex justify-center">
-            <div className="relative">
-              <div className="absolute -inset-6 bg-gold-gradient rounded-sm opacity-20 blur-2xl" />
-              <div className="book-mockup w-64 md:w-80">
-                <div className="book-mockup__inner">
-                  <div className="book-mockup__back" />
-                  <div className="book-mockup__pages" />
-                  <img
-                    src={coverGuardia}
-                    alt="A Última Guardiã de Camões"
-                    className="book-mockup__cover"
-                    loading="lazy"
-                  />
-                  <div className="book-mockup__spine" />
-                  <div className="book-mockup__gloss" />
-                </div>
-                <div className="book-mockup__reflection" />
-              </div>
+            <div className="relative w-full">
+              <div className="absolute -inset-6 bg-gold-gradient rounded-sm opacity-15 blur-3xl" />
+              <img
+                src={mockupGuardia}
+                alt="Edição especial de colecionador — A Última Guardiã de Camões, capa dura, papel pólen 90g, fita de cetim dourada"
+                className="relative w-full max-w-xl mx-auto drop-shadow-2xl"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -70,17 +65,50 @@ const FeaturedBook = () => {
               Nesta obra premiada, Vanessa Clasen conduz o leitor por uma narrativa que atravessa o tempo — revelando que algumas verdades jamais deixam de existir.
             </p>
 
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 font-body text-xs md:text-sm text-foreground/70 pt-2">
+              <li className="flex items-center gap-2"><span className="text-primary">✦</span> Capa dura premium</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✦</span> Papel pólen 90g</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✦</span> Fita de cetim dourada</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✦</span> Edição de colecionador</li>
+            </ul>
+
             <div className="pt-4">
               <a
-                href="#reservar"
+                href={PRESALE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-gold-gradient px-10 py-4 font-heading text-base font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
               >
-                🏆 Reservar Agora o Livro Premiado
+                🏆 Reservar na Pré-venda
               </a>
               <p className="font-elegant text-sm text-foreground/40 italic mt-3">
-                Garanta seu exemplar antes do lançamento oficial.
+                Pré-venda oficial via Benfeitoria — garanta seu exemplar antes do lançamento.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Mapa da jornada */}
+        <div className="mt-20 md:mt-28 max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="font-elegant text-xs md:text-sm uppercase tracking-[0.3em] text-primary/70 mb-3">
+              A Jornada
+            </p>
+            <h3 className="font-heading text-2xl md:text-4xl font-bold text-foreground">
+              De Porto a <span className="text-gold-gradient">Lisboa</span>, pelos rastros de Camões
+            </h3>
+            <p className="font-elegant text-base md:text-lg italic text-foreground/50 mt-3">
+              Cada cidade guarda um segredo. Cada segredo, uma página.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gold-gradient opacity-10 blur-3xl rounded-full" />
+            <img
+              src={mapGuardia}
+              alt="Mapa da jornada — Porto, Coimbra, Lisboa e Açores"
+              className="relative w-full max-w-3xl mx-auto rounded-sm shadow-2xl border border-primary/20"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
