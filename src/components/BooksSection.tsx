@@ -166,10 +166,12 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
             </p>
 
             <a
-              href="#reservar"
+              href={book.id === "guardia" ? "https://benfeitoria.com/aultimaguardiadecamoes" : "#reservar"}
+              target={book.id === "guardia" ? "_blank" : undefined}
+              rel={book.id === "guardia" ? "noopener noreferrer" : undefined}
               className="inline-block border-2 border-gold px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
             >
-              Conhecer este livro →
+              {book.id === "guardia" ? "Reservar na Pré-venda →" : "Conhecer este livro →"}
             </a>
           </div>
         </div>
