@@ -71,6 +71,18 @@ export default {
           dark: "hsl(var(--burgundy-dark))",
         },
         teal: "hsl(var(--teal))",
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          foreground: "hsl(var(--info-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -83,9 +95,12 @@ export default {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius-lg)",
+        md: "var(--radius-md)",
+        sm: "var(--radius-sm)",
+        xl: "var(--radius-xl)",
+        "2xl": "var(--radius-2xl)",
+        pill: "var(--radius-pill)",
       },
       keyframes: {
         "accordion-down": {
@@ -125,6 +140,25 @@ export default {
         page: "var(--shadow-page)",
         gold: "var(--shadow-gold)",
         deep: "var(--shadow-deep)",
+        "elevation-1": "var(--elevation-1)",
+        "elevation-2": "var(--elevation-2)",
+        "elevation-3": "var(--elevation-3)",
+        "elevation-4": "var(--elevation-4)",
+        "elevation-5": "var(--elevation-5)",
+      },
+      transitionTimingFunction: {
+        literary: "cubic-bezier(0.22, 1, 0.36, 1)",
+        elegant: "cubic-bezier(0.4, 0, 0.2, 1)",
+      },
+      zIndex: {
+        base: "1",
+        raised: "10",
+        overlay: "100",
+        sticky: "200",
+        drawer: "300",
+        modal: "400",
+        toast: "500",
+        tooltip: "600",
       },
     },
   },
