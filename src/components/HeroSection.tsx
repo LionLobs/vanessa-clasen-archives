@@ -11,23 +11,23 @@ const HeroSection = () => {
     >
       {/* Foto de fundo da Vanessa */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:55%_top] md:bg-[position:right_top] md:bg-[length:auto_110%]"
+        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:65%_top] md:bg-[position:right_15%_top] md:bg-[length:auto_115%]"
         style={{ backgroundImage: `url(${vanessaPortrait})` }}
         aria-hidden
       />
 
       {/* Mobile: escurece um pouco o fundo para legibilidade */}
-      <div className="absolute inset-0 bg-background/55 md:hidden" aria-hidden />
+      <div className="absolute inset-0 bg-background/70 md:hidden" aria-hidden />
 
       {/* Desktop: gradiente suave da esquerda → transparente para revelar a foto à direita */}
       <div
-        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background/75 from-20% via-background/45 via-55% to-transparent to-85%"
+        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background from-25% via-background/70 via-55% to-background/30 to-100%"
         aria-hidden
       />
 
       {/* Vinheta cinematográfica nas bordas */}
       <div
-        className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_50%,hsl(0_0%_0%/0.55)_100%)]"
+        className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_40%,hsl(0_0%_0%/0.75)_100%)]"
         aria-hidden
       />
 
