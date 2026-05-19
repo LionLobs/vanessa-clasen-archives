@@ -1,5 +1,5 @@
 import quill from "@/assets/quill-divider.png";
-import logo from "@/assets/logo-vanessa.jpg";
+import logo from "@/assets/logo-vanessa.png";
 import { Instagram, Facebook, Mail, BookOpen } from "lucide-react";
 
 const Footer = () => {

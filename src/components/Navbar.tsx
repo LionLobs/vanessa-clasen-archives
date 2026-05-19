@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo-vanessa.jpg";
+import logo from "@/assets/logo-vanessa.png";
 import quill from "@/assets/quill-divider.png";
 
 const Navbar = () => {
