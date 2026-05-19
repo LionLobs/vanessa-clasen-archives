@@ -5,22 +5,15 @@ const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16">
-      <div
-        className="absolute inset-0 bg-contain md:bg-cover bg-no-repeat bg-[position:center_top] md:bg-[position:75%_top]"
-        style={{ backgroundImage: `url(${vanessaPortrait})` }}
-      />
-      {/* Cinematic darkening — stronger on the left to protect the headline */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20 md:from-background md:via-background/60 md:to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/35 to-transparent" />
-      {/* Warm golden glow on the right side */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_75%_45%,hsl(var(--primary)/0.18)_0%,transparent_55%)] mix-blend-screen pointer-events-none" />
-      {/* Subtle film vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(0_0%_0%/0.55)_100%)] pointer-events-none" />
+    <section id="inicio" className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16 bg-background">
+      {/* Ambient glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_75%_50%,hsl(var(--primary)/0.12)_0%,transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(0_0%_0%/0.45)_100%)] pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-5 md:px-6">
-        <div className="max-w-2xl">
-          <div className="text-left">
+        <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Texto */}
+          <div className="text-left order-2 md:order-1">
             <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-3 md:px-4 py-1 mb-5 animate-fade-up">
               <span className="text-sm">🏆</span>
               <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase">
@@ -82,6 +75,25 @@ const HeroSection = () => {
               <span className="flex items-center gap-1.5"><span className="text-primary">✦</span> Capa dura premium</span>
               <span className="flex items-center gap-1.5"><span className="text-primary">✦</span> Tiragem limitada</span>
               <span className="flex items-center gap-1.5"><span className="text-primary">✦</span> 1º FLIPoços</span>
+            </div>
+          </div>
+
+          {/* Foto da Vanessa */}
+          <div
+            className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <div className="relative w-56 sm:w-72 md:w-full max-w-md">
+              <div className="absolute -inset-6 bg-gold-gradient rounded-2xl opacity-25 blur-3xl" />
+              <div className="absolute -inset-px rounded-2xl bg-gold-gradient opacity-70" />
+              <img
+                src={vanessaPortrait}
+                alt="Vanessa Clasen, autora premiada de A Última Guardiã de Camões"
+                className="relative w-full h-auto rounded-2xl object-cover shadow-gold"
+                loading="eager"
+              />
+              <span className="pointer-events-none absolute -top-3 -left-3 w-10 h-10 border-t border-l border-primary/60" />
+              <span className="pointer-events-none absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-primary/60" />
             </div>
           </div>
         </div>
