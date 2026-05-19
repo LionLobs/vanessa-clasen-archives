@@ -26,9 +26,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2.5" aria-label="Vanessa Clasen">
-          <img src={quill} alt="" className="h-7 w-7 md:h-8 md:w-8 opacity-90" loading="lazy" />
-          <span className="font-heading text-base md:text-lg tracking-[0.18em] uppercase text-gold-gradient">
+        <a href="#inicio" className="flex items-center gap-3" aria-label="Vanessa Clasen">
+          <img src={quill} alt="" className="h-8 w-8 md:h-9 md:w-9 opacity-90 drop-shadow-[0_0_8px_hsl(var(--primary)/0.4)]" loading="lazy" />
+          <span className="font-elegant italic text-xl md:text-2xl tracking-[0.08em] text-gold-gradient leading-none">
             Vanessa Clasen
           </span>
         </a>
