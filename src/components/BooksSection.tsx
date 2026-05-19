@@ -86,7 +86,7 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
   }, []);
 
   return (
-    <div ref={ref} className="relative min-h-screen flex items-center overflow-hidden">
+    <div ref={ref} className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden py-16 md:py-24">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${book.cover})` }}
@@ -104,16 +104,16 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
       />
       <div className={`absolute inset-0 ${book.overlayClass}`} />
 
-      <div className="relative z-10 container mx-auto px-6 py-24">
+      <div className="relative z-10 container mx-auto px-5 md:px-6">
         <div
-          className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto transition-all duration-1000 ${
+          className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center max-w-6xl mx-auto transition-all duration-1000 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
           <div className={`flex justify-center ${index % 2 === 1 ? "md:order-2" : ""}`}>
             <div className="relative">
-              <div className="absolute -inset-8 bg-gold-gradient rounded-sm opacity-25 blur-3xl" />
-              <div className="book-mockup w-60 md:w-80">
+              <div className="absolute -inset-6 md:-inset-8 bg-gold-gradient rounded-sm opacity-25 blur-3xl" />
+              <div className="book-mockup w-44 sm:w-52 md:w-80">
                 <div className="book-mockup__inner">
                   <div className="book-mockup__back" />
                   <div className="book-mockup__pages" />
@@ -131,43 +131,43 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <div className="flex items-center gap-4">
-              <span className="font-elegant text-5xl md:text-6xl italic text-primary/40 leading-none">
+              <span className="font-elegant text-4xl md:text-6xl italic text-primary/40 leading-none">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div className="h-px flex-1 bg-gradient-to-r from-primary/40 to-transparent" />
-              <span className="font-elegant text-xs uppercase tracking-widest text-foreground/50">
+              <span className="font-elegant text-[10px] md:text-xs uppercase tracking-widest text-foreground/50">
                 {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
               </span>
             </div>
 
             <div className="flex items-center gap-3 flex-wrap">
-              <span className="font-elegant text-sm uppercase tracking-widest text-primary">
+              <span className="font-elegant text-xs md:text-sm uppercase tracking-widest text-primary">
                 {book.genre}
               </span>
               {"award" in book && book.award && (
-                <span className="bg-primary/15 border border-primary/30 text-primary text-xs font-body px-3 py-1 rounded-full">
+                <span className="bg-primary/15 border border-primary/30 text-primary text-[11px] md:text-xs font-body px-3 py-1 rounded-full">
                   {book.award}
                 </span>
               )}
             </div>
 
-            <h3 className="font-heading text-3xl md:text-5xl font-bold text-foreground leading-tight">
+            <h3 className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold text-foreground leading-tight">
               {book.title}
             </h3>
 
-            <p className="font-elegant text-xl md:text-2xl italic text-primary/80 border-l-2 border-primary/40 pl-4">
+            <p className="font-elegant text-base md:text-2xl italic text-primary/80 border-l-2 border-primary/40 pl-3 md:pl-4">
               {book.quote}
             </p>
 
-            <p className="font-body text-base md:text-lg text-foreground/75 leading-relaxed">
+            <p className="font-body text-sm md:text-lg text-foreground/75 leading-relaxed">
               {book.synopsis}
             </p>
 
             <a
               href="#reservar"
-              className="inline-block border-2 border-gold px-8 py-3 font-heading text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
+              className="inline-block border-2 border-gold px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
             >
               Conhecer este livro →
             </a>
