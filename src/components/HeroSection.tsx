@@ -1,5 +1,5 @@
 import quill from "@/assets/quill-divider.png";
-import vanessaPortrait from "@/assets/vanessa-portrait.jpg";
+import vanessaPortrait from "@/assets/vanessa-portrait-hero.jpg";
 
 const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 
@@ -7,11 +7,16 @@ const HeroSection = () => {
   return (
     <section id="inicio" className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        className="absolute inset-0 bg-cover bg-no-repeat scale-110 animate-[heroKenBurns_20s_ease-in-out_infinite_alternate] bg-[position:60%_center] md:bg-[position:75%_center]"
         style={{ backgroundImage: `url(${vanessaPortrait})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 md:to-background/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+      {/* Cinematic darkening — stronger on the left to protect the headline */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/30 md:from-background md:via-background/75 md:to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+      {/* Warm golden glow on the right side */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_75%_45%,hsl(var(--primary)/0.18)_0%,transparent_55%)] mix-blend-screen pointer-events-none" />
+      {/* Subtle film vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,hsl(0_0%_0%/0.55)_100%)] pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-5 md:px-6">
         <div className="max-w-2xl">
