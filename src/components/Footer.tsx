@@ -10,9 +10,9 @@ const Footer = () => {
         </div>
 
         <div className="text-center mb-10">
-          <div className="flex flex-col items-center gap-3 mb-5">
-            <img src={quill} alt="" className="h-10 w-10 opacity-80" loading="lazy" />
-            <span className="font-heading text-xl md:text-2xl tracking-[0.2em] uppercase text-gold-gradient">
+          <div className="flex flex-col items-center gap-4 mb-5">
+            <img src={quill} alt="" className="h-12 w-12 opacity-90 drop-shadow-[0_0_12px_hsl(var(--primary)/0.5)]" loading="lazy" />
+            <span className="font-elegant italic text-3xl md:text-4xl tracking-[0.08em] text-gold-gradient leading-none">
               Vanessa Clasen
             </span>
           </div>
