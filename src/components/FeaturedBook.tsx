@@ -102,14 +102,19 @@ const FeaturedBook = () => {
               Cada cidade guarda um segredo. Cada segredo, uma página.
             </p>
           </div>
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gold-gradient opacity-10 blur-3xl rounded-full" />
-            <img
-              src={mapGuardia}
-              alt="Mapa da jornada — Porto, Coimbra, Lisboa e Açores"
-              className="relative w-full max-w-3xl mx-auto rounded-sm shadow-2xl border border-primary/20"
-              loading="lazy"
-            />
+          <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+            {/* Halo dourado */}
+            <div className="absolute -inset-6 bg-gold-gradient opacity-15 blur-3xl rounded-full pointer-events-none" aria-hidden />
+            {/* Moldura tipo pergaminho antigo */}
+            <div className="relative p-3 md:p-4 bg-gradient-to-br from-[hsl(35_25%_12%)] to-[hsl(20_15%_5%)] rounded-sm border border-primary/30 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)]">
+              <div className="absolute inset-2 border border-primary/20 pointer-events-none rounded-sm" aria-hidden />
+              <img
+                src={mapGuardia}
+                alt="Mapa da jornada — Porto, Coimbra, Lisboa e Açores"
+                className="relative w-full rounded-sm"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
