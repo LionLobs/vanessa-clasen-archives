@@ -6,7 +6,7 @@ import videoMar from "@/assets/video-mar.mp4.asset.json";
 import videoGuardia from "@/assets/video-guardia.mp4.asset.json";
 import quill from "@/assets/quill-divider.png";
 import { useEffect, useRef, useState } from "react";
-import BookAudioPlayer from "./BookAudioPlayer";
+import SpotifyEmbed from "./SpotifyEmbed";
 
 const books = [
   {
@@ -19,6 +19,7 @@ const books = [
     synopsis:
       "Alguns segredos deveriam ficar guardados para sempre... Um suspense psicológico que mergulha nas profundezas da memória, onde lembranças esquecidas podem ser mais perigosas do que a verdade.",
     quote: "“A memória é o último lugar onde os mortos ainda respiram.”",
+    spotify: { id: "4JOEMgLkrHp8K1XNmyNffH", kind: "track" as const },
   },
   {
     id: "mar",
@@ -30,6 +31,7 @@ const books = [
     synopsis:
       "O mar guarda segredos que nenhuma maré consegue apagar. Um suspense policial visceral ambientado no litoral brasileiro, onde cada onda traz à tona verdades enterradas e destinos cruzados.",
     quote: "“Há marés que trazem corpos. Outras, devolvem culpas.”",
+    spotify: { id: "3xrc4pM3I1qWKw5Wwa35PX", kind: "playlist" as const },
   },
   {
     id: "guardia",
@@ -42,6 +44,7 @@ const books = [
       "Manuscritos esquecidos, heranças ocultas e segredos literários se entrelaçam neste romance histórico premiado que atravessa o tempo — revelando que algumas verdades jamais deixam de existir.",
     award: "🏆 1º lugar — FLIPoços",
     quote: "“Cada manuscrito é um sussurro do tempo que insiste em ser ouvido.”",
+    spotify: { id: "3TPr2Em1i454nDS8UJbaFW", kind: "track" as const },
   },
 ];
 
@@ -181,7 +184,7 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
               >
                 {book.id === "guardia" ? "Reservar na Pré-venda →" : "Conhecer este livro →"}
               </a>
-              <BookAudioPlayer bookId={book.id} />
+              <SpotifyEmbed spotifyId={book.spotify.id} kind={book.spotify.kind} label={`Trilha de ${book.title}`} />
             </div>
           </div>
         </div>
