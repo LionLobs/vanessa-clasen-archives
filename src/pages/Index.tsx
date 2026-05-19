@@ -4,6 +4,7 @@ import QuotesMarquee from "@/components/QuotesMarquee";
 import FeaturedBook from "@/components/FeaturedBook";
 import BooksSection from "@/components/BooksSection";
 import AuthoritySection from "@/components/AuthoritySection";
+import PressGallery from "@/components/PressGallery";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ const Index = () => {
       <FeaturedBook />
       <BooksSection />
       <AuthoritySection />
+      <PressGallery />
       <Testimonials />
       <Newsletter />
       <Footer />
