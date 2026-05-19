@@ -9,19 +9,30 @@ const HeroSection = () => {
       id="inicio"
       className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16 bg-background"
     >
-      {/* Foto de fundo da Vanessa */}
+      {/* Mobile: foto de fundo cobrindo tudo */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:65%_top] md:bg-contain md:bg-right md:bg-[position:right_center]"
+        className="absolute inset-0 md:hidden bg-no-repeat bg-cover bg-[position:65%_top]"
         style={{ backgroundImage: `url(${vanessaPortrait})` }}
         aria-hidden
       />
-
-      {/* Mobile: escurece um pouco o fundo para legibilidade */}
       <div className="absolute inset-0 bg-background/70 md:hidden" aria-hidden />
 
-      {/* Desktop: gradiente suave da esquerda → transparente para revelar a foto à direita */}
+      {/* Desktop: foto à direita com fade suave para o fundo (sem corte seco) */}
+      <img
+        src={vanessaPortrait}
+        alt=""
+        aria-hidden
+        className="hidden md:block absolute right-0 top-0 h-full w-auto max-w-[60%] object-cover object-top select-none pointer-events-none"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 12%, rgba(0,0,0,0.85) 35%, #000 55%)",
+          maskImage:
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 12%, rgba(0,0,0,0.85) 35%, #000 55%)",
+        }}
+      />
+      {/* Desktop: véu sutil sobre a foto para garantir legibilidade do texto à esquerda */}
       <div
-        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background from-15% via-background/65 via-55% to-transparent to-95%"
+        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background via-background/55 via-45% to-transparent to-75%"
         aria-hidden
       />
 
