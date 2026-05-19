@@ -17,7 +17,7 @@ const QuotesMarquee = () => {
           {[...quotes, ...quotes].map((q, i) => (
             <span
               key={i}
-              className="font-elegant italic text-base md:text-lg text-foreground/60 whitespace-nowrap flex items-center gap-3"
+              className="font-elegant italic text-lg md:text-2xl text-foreground/65 whitespace-nowrap flex items-center gap-4"
             >
               {q}
               <span className="text-primary/40">◆</span>
