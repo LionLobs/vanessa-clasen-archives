@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16 bg-background"
+      className="relative min-h-[100svh] md:min-h-screen flex items-end md:items-center overflow-hidden pt-24 md:pt-20 pb-16 bg-background"
     >
       {/* Mobile: foto de fundo cobrindo tudo */}
       <div
