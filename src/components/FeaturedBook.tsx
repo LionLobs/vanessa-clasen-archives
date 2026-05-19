@@ -41,19 +41,13 @@ const FeaturedBook = () => {
           <p className="font-elegant text-sm md:text-base text-foreground/50 italic">Escrito à mão, com a delicadeza de quem tece o tempo em cada linha.</p>
         </div>
 
-        {/* Mockup hero — fade orgânico nas bordas, sem corte seco */}
+        {/* Mockup hero — transparente, sem corte seco */}
         <div className="relative max-w-6xl mx-auto mb-10 md:mb-14">
-          <div className="absolute -inset-10 bg-gold-gradient opacity-10 blur-[100px] rounded-full pointer-events-none" aria-hidden />
+          <div className="absolute inset-x-10 -bottom-6 h-24 bg-gold-gradient opacity-15 blur-[80px] rounded-full pointer-events-none" aria-hidden />
           <img
             src={mockupGuardia}
             alt="Edição especial de colecionador — A Última Guardiã de Camões, capa dura, papel pólen 90g, fita de cetim dourada"
-            className="relative w-full mx-auto"
-            style={{
-              WebkitMaskImage:
-                "radial-gradient(ellipse 75% 80% at 50% 50%, #000 55%, transparent 100%)",
-              maskImage:
-                "radial-gradient(ellipse 75% 80% at 50% 50%, #000 55%, transparent 100%)",
-            }}
+            className="relative w-full mx-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.55)]"
             loading="lazy"
           />
         </div>
