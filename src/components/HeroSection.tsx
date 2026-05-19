@@ -7,12 +7,12 @@ const HeroSection = () => {
   return (
     <section id="inicio" className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-20 pb-16">
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat scale-110 animate-[heroKenBurns_20s_ease-in-out_infinite_alternate] bg-[position:60%_center] md:bg-[position:75%_center]"
+        className="absolute inset-0 bg-contain md:bg-cover bg-no-repeat bg-[position:center_top] md:bg-[position:75%_top]"
         style={{ backgroundImage: `url(${vanessaPortrait})` }}
       />
       {/* Cinematic darkening — stronger on the left to protect the headline */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/30 md:from-background md:via-background/75 md:to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20 md:from-background md:via-background/60 md:to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/35 to-transparent" />
       {/* Warm golden glow on the right side */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_75%_45%,hsl(var(--primary)/0.18)_0%,transparent_55%)] mix-blend-screen pointer-events-none" />
       {/* Subtle film vignette */}
