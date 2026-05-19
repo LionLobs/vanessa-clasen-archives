@@ -307,12 +307,12 @@
   .book-mockup__inner {
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(-26deg) rotateX(4deg);
+    transform: rotateY(-18deg) rotateX(3deg) scale(0.92);
     transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: transform;
   }
   .book-mockup:hover .book-mockup__inner {
-    transform: rotateY(-12deg) rotateX(2deg);
+    transform: rotateY(-10deg) rotateX(1.5deg) scale(0.95);
   }
   .book-mockup__cover {
     position: relative;
