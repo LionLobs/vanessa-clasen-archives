@@ -5,13 +5,20 @@ import quill from "@/assets/quill-divider.png";
 const FeaturedBook = () => {
   return (
     <section id="premiado" className="relative py-24 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${coverGuardia})` }}
+        aria-hidden
+      />
       <video
         src={videoGuardia.url}
+        poster={coverGuardia}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(30_20%_5%/0.90)] via-[hsl(35_15%_8%/0.82)] to-[hsl(30_10%_5%/0.72)]" />
 
