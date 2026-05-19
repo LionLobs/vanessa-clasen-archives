@@ -87,11 +87,7 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
 
   return (
     <div ref={ref} className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden py-16 md:py-24">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${book.cover})` }}
-        aria-hidden
-      />
+      {/* Video de fundo */}
       <video
         src={book.video}
         poster={book.cover}
@@ -100,9 +96,19 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
         muted
         playsInline
         preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
       />
+      {/* Camadas de profundidade */}
       <div className={`absolute inset-0 ${book.overlayClass}`} />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--background)/0.65)_100%)]" />
+      {/* Linhas finas decorativas */}
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      {/* Cantos dourados */}
+      <span className="pointer-events-none absolute top-6 left-6 w-8 h-8 border-t border-l border-primary/50 hidden md:block" />
+      <span className="pointer-events-none absolute top-6 right-6 w-8 h-8 border-t border-r border-primary/50 hidden md:block" />
+      <span className="pointer-events-none absolute bottom-6 left-6 w-8 h-8 border-b border-l border-primary/50 hidden md:block" />
+      <span className="pointer-events-none absolute bottom-6 right-6 w-8 h-8 border-b border-r border-primary/50 hidden md:block" />
 
       <div className="relative z-10 container mx-auto px-5 md:px-6">
         <div
