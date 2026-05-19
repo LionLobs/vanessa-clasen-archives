@@ -1,7 +1,6 @@
 import coverGuardia from "@/assets/cover-guardia.jpg";
 import mockupGuardia from "@/assets/mockup-guardia.png";
 import mapGuardia from "@/assets/map-guardia.png";
-import videoGuardia from "@/assets/video-guardia.mp4.asset.json";
 import quill from "@/assets/quill-divider.png";
 
 const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
@@ -9,22 +8,21 @@ const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 const FeaturedBook = () => {
   return (
     <section id="premiado" className="relative py-16 md:py-20 overflow-hidden">
+      {/* Fundo warm parchment / noir literário */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(35_25%_10%)_0%,hsl(30_20%_5%)_60%,hsl(20_15%_3%)_100%)]" aria-hidden />
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${coverGuardia})` }}
+        className="absolute inset-0 opacity-[0.07] mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0 0.4  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+        }}
         aria-hidden
       />
-      <video
-        src={videoGuardia.url}
-        poster={coverGuardia}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(30_20%_5%/0.90)] via-[hsl(35_15%_8%/0.82)] to-[hsl(30_10%_5%/0.72)]" />
+      {/* Halo dourado no topo */}
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[60rem] h-[40rem] bg-gold-gradient opacity-[0.08] blur-[120px] rounded-full pointer-events-none" aria-hidden />
+      {/* Linhas finas decorativas */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <div className="relative z-10 container mx-auto px-5 md:px-6">
         <div className="quill-divider">
@@ -44,19 +42,24 @@ const FeaturedBook = () => {
           <p className="font-elegant text-sm md:text-base text-foreground/50 italic">Escrito à mão, com a delicadeza de quem tece o tempo em cada linha.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-          <div className="flex justify-center">
-            <div className="relative w-full">
-              <div className="absolute -inset-6 bg-gold-gradient rounded-sm opacity-15 blur-3xl" />
-              <img
-                src={mockupGuardia}
-                alt="Edição especial de colecionador — A Última Guardiã de Camões, capa dura, papel pólen 90g, fita de cetim dourada"
-                className="relative w-full max-w-xl mx-auto drop-shadow-2xl"
-                loading="lazy"
-              />
-            </div>
-          </div>
+        {/* Mockup hero — fade orgânico nas bordas, sem corte seco */}
+        <div className="relative max-w-6xl mx-auto mb-10 md:mb-14">
+          <div className="absolute -inset-10 bg-gold-gradient opacity-10 blur-[100px] rounded-full pointer-events-none" aria-hidden />
+          <img
+            src={mockupGuardia}
+            alt="Edição especial de colecionador — A Última Guardiã de Camões, capa dura, papel pólen 90g, fita de cetim dourada"
+            className="relative w-full mx-auto"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(ellipse 75% 80% at 50% 50%, #000 55%, transparent 100%)",
+              maskImage:
+                "radial-gradient(ellipse 75% 80% at 50% 50%, #000 55%, transparent 100%)",
+            }}
+            loading="lazy"
+          />
+        </div>
 
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-start max-w-5xl mx-auto">
           <div className="space-y-6">
             <p className="font-body text-lg text-foreground/80 leading-relaxed">
               Um romance histórico envolvente, onde manuscritos esquecidos, heranças ocultas e segredos literários se entrelaçam.
@@ -64,24 +67,26 @@ const FeaturedBook = () => {
             <p className="font-body text-base text-foreground/70 leading-relaxed">
               Nesta obra premiada, Vanessa Clasen conduz o leitor por uma narrativa que atravessa o tempo — revelando que algumas verdades jamais deixam de existir.
             </p>
+          </div>
 
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 font-body text-xs md:text-sm text-foreground/70 pt-2">
+          <div className="space-y-6">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 font-body text-xs md:text-sm text-foreground/75">
               <li className="flex items-center gap-2"><span className="text-primary">✦</span> Capa dura premium</li>
               <li className="flex items-center gap-2"><span className="text-primary">✦</span> Papel pólen 90g</li>
               <li className="flex items-center gap-2"><span className="text-primary">✦</span> Fita de cetim dourada</li>
               <li className="flex items-center gap-2"><span className="text-primary">✦</span> Edição de colecionador</li>
             </ul>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <a
                 href={PRESALE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gold-gradient px-10 py-4 font-heading text-base font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
+                className="inline-block bg-gold-gradient px-8 md:px-10 py-3.5 md:py-4 font-heading text-sm md:text-base font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
               >
                 🏆 Reservar na Pré-venda
               </a>
-              <p className="font-elegant text-sm text-foreground/40 italic mt-3">
+              <p className="font-elegant text-xs md:text-sm text-foreground/40 italic mt-3">
                 Pré-venda oficial via Benfeitoria — garanta seu exemplar antes do lançamento.
               </p>
             </div>
