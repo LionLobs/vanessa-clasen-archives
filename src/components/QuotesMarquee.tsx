@@ -1,12 +1,12 @@
 const quotes = [
-  "✒ Escrito à mão, palavra por palavra",
-  "🏆 1º lugar — FLIPoços 2024",
-  "📖 2º melhor suspense — Prêmio Book Brasil",
-  "🌊 Da Florianópolis das marés ao papel antigo",
-  "✦ Romance histórico premiado nacionalmente",
-  "🪶 Cada manuscrito nasce em tinta e silêncio",
-  "📚 Três obras publicadas",
-  "🥇 Reconhecida pela crítica literária",
+  "Escrito à mão, palavra por palavra",
+  "1º lugar — FLIPoços 2024",
+  "2º melhor suspense — Prêmio Book Brasil",
+  "Da Florianópolis das marés ao papel antigo",
+  "Romance histórico premiado nacionalmente",
+  "Cada manuscrito nasce em tinta e silêncio",
+  "Três obras publicadas",
+  "Reconhecida pela crítica literária",
 ];
 
 const QuotesMarquee = () => {
