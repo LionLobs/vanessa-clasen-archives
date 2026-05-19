@@ -3,26 +3,26 @@ import quill from "@/assets/quill-divider.png";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 section-overlay-strong" />
       
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+      <div className="relative z-10 container mx-auto px-5 md:px-6 text-center max-w-3xl py-20">
         <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <img
             src={quill}
             alt=""
-            className="w-14 h-14 mx-auto mb-10 opacity-60"
+            className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-6 md:mb-8 opacity-60"
             width={512}
             height={512}
           />
         </div>
 
         <h1
-          className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 animate-fade-up"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
           <span className="text-foreground">Vanessa </span>
