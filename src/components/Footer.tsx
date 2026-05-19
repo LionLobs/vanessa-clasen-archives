@@ -1,5 +1,4 @@
 import quill from "@/assets/quill-divider.png";
-import logo from "@/assets/logo-vanessa.png";
 import { Instagram, Facebook, Mail, BookOpen } from "lucide-react";
 
 const Footer = () => {
@@ -11,8 +10,13 @@ const Footer = () => {
         </div>
 
         <div className="text-center mb-10">
-          <img src={logo} alt="Vanessa Clasen" className="h-16 mx-auto mb-6" />
-          <p className="font-elegant text-lg text-foreground/50 italic max-w-md mx-auto">
+          <div className="flex flex-col items-center gap-3 mb-5">
+            <img src={quill} alt="" className="h-10 w-10 opacity-80" loading="lazy" />
+            <span className="font-heading text-xl md:text-2xl tracking-[0.2em] uppercase text-gold-gradient">
+              Vanessa Clasen
+            </span>
+          </div>
+          <p className="font-elegant text-base md:text-lg text-foreground/50 italic max-w-md mx-auto">
             Escritora e jornalista — cada história nasce à mão, em tinta e alma, antes de ganhar o mundo.
           </p>
         </div>
