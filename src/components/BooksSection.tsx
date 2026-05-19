@@ -87,13 +87,20 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
 
   return (
     <div ref={ref} className="relative min-h-screen flex items-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${book.cover})` }}
+        aria-hidden
+      />
       <video
         src={book.video}
+        poster={book.cover}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
       />
       <div className={`absolute inset-0 ${book.overlayClass}`} />
 
