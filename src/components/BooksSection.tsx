@@ -120,10 +120,10 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <div className={`flex justify-center ${index % 2 === 1 ? "md:order-2" : ""}`}>
+          <div className={`flex justify-center px-6 md:px-10 ${index % 2 === 1 ? "md:order-2" : ""}`}>
             <div className="relative">
               <div className="absolute -inset-6 md:-inset-8 bg-gold-gradient rounded-sm opacity-25 blur-3xl" />
-              <div className="book-mockup w-44 sm:w-52 md:w-80">
+              <div className="book-mockup w-36 sm:w-44 md:w-64 lg:w-72">
                 <div className="book-mockup__inner">
                   <div className="book-mockup__back" />
                   <div className="book-mockup__pages" />
