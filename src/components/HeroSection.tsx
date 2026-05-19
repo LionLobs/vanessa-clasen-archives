@@ -11,7 +11,7 @@ const HeroSection = () => {
     >
       {/* Foto de fundo da Vanessa */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:65%_top] md:bg-[position:right_15%_top] md:bg-[length:auto_115%]"
+        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:65%_top] md:bg-[position:85%_center] md:bg-cover"
         style={{ backgroundImage: `url(${vanessaPortrait})` }}
         aria-hidden
       />
@@ -21,7 +21,7 @@ const HeroSection = () => {
 
       {/* Desktop: gradiente suave da esquerda → transparente para revelar a foto à direita */}
       <div
-        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background from-25% via-background/70 via-55% to-background/30 to-100%"
+        className="hidden md:block absolute inset-0 bg-gradient-to-r from-background from-15% via-background/65 via-55% to-transparent to-95%"
         aria-hidden
       />
 
