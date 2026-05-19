@@ -6,6 +6,7 @@ import videoMar from "@/assets/video-mar.mp4.asset.json";
 import videoGuardia from "@/assets/video-guardia.mp4.asset.json";
 import quill from "@/assets/quill-divider.png";
 import { useEffect, useRef, useState } from "react";
+import BookAudioPlayer from "./BookAudioPlayer";
 
 const books = [
   {
@@ -171,14 +172,17 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
               {book.synopsis}
             </p>
 
-            <a
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
               href={book.id === "guardia" ? "https://benfeitoria.com/aultimaguardiadecamoes" : "#reservar"}
               target={book.id === "guardia" ? "_blank" : undefined}
               rel={book.id === "guardia" ? "noopener noreferrer" : undefined}
               className="inline-block border-2 border-gold px-6 md:px-8 py-3 font-heading text-xs md:text-sm font-semibold text-primary tracking-wider uppercase hover:bg-primary/10 transition-colors rounded-sm"
-            >
-              {book.id === "guardia" ? "Reservar na Pré-venda →" : "Conhecer este livro →"}
-            </a>
+              >
+                {book.id === "guardia" ? "Reservar na Pré-venda →" : "Conhecer este livro →"}
+              </a>
+              <BookAudioPlayer bookId={book.id} />
+            </div>
           </div>
         </div>
       </div>
