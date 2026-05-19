@@ -11,7 +11,7 @@ const HeroSection = () => {
     >
       {/* Foto de fundo da Vanessa */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:65%_top] md:bg-[position:85%_center] md:bg-cover"
+        className="absolute inset-0 bg-no-repeat bg-cover bg-[position:65%_top] md:bg-contain md:bg-right md:bg-[position:right_center]"
         style={{ backgroundImage: `url(${vanessaPortrait})` }}
         aria-hidden
       />
