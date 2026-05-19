@@ -46,10 +46,12 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <img src={quill} alt="" className="h-5 w-5 opacity-50" loading="lazy" />
           <a
-            href="#premiado"
+            href="https://benfeitoria.com/aultimaguardiadecamoes"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gold-gradient px-5 py-2 text-sm font-heading font-semibold text-primary-foreground rounded-sm tracking-wide hover:opacity-90 transition-opacity"
           >
-            Reservar Livro
+            Pré-venda
           </a>
         </div>
 
@@ -82,10 +84,12 @@ const Navbar = () => {
           ))}
           <div className="p-4">
             <a
-              href="#premiado"
+              href="https://benfeitoria.com/aultimaguardiadecamoes"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-center bg-gold-gradient px-5 py-3 text-sm font-heading font-semibold text-primary-foreground rounded-sm"
             >
-              Reservar Livro
+              Pré-venda
             </a>
           </div>
         </div>
