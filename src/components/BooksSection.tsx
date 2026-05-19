@@ -49,6 +49,7 @@ const books = [
 ];
 
 const BooksSection = () => {
+  const [activeId, setActiveId] = useState<string | null>(null);
   return (
     <section id="obras" className="relative">
       {/* Intro */}
@@ -66,7 +67,20 @@ const BooksSection = () => {
       </div>
 
       {books.map((b, i) => (
-        <BookExperience key={b.id} book={b} index={i} total={books.length} />
+        <BookExperience
+          key={b.id}
+          book={b}
+          index={i}
+          total={books.length}
+          isActive={activeId === b.id}
+          onVisibilityChange={(ratio) => {
+            setActiveId((current) => {
+              if (ratio >= 0.55) return b.id;
+              if (current === b.id && ratio < 0.25) return null;
+              return current;
+            });
+          }}
+        />
       ))}
     </section>
   );
@@ -74,7 +88,19 @@ const BooksSection = () => {
 
 type Book = (typeof books)[number];
 
-const BookExperience = ({ book, index, total }: { book: Book; index: number; total: number }) => {
+const BookExperience = ({
+  book,
+  index,
+  total,
+  isActive,
+  onVisibilityChange,
+}: {
+  book: Book;
+  index: number;
+  total: number;
+  isActive: boolean;
+  onVisibilityChange: (ratio: number) => void;
+}) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -82,12 +108,15 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting && entry.intersectionRatio > 0.3),
-      { threshold: [0, 0.3, 0.6, 1] }
+      ([entry]) => {
+        setVisible(entry.isIntersecting && entry.intersectionRatio > 0.3);
+        onVisibilityChange(entry.intersectionRatio);
+      },
+      { threshold: [0, 0.15, 0.25, 0.4, 0.55, 0.75, 1] }
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [onVisibilityChange]);
 
   return (
     <div ref={ref} className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden py-16 md:py-24">
@@ -184,7 +213,7 @@ const BookExperience = ({ book, index, total }: { book: Book; index: number; tot
               >
                 {book.id === "guardia" ? "Reservar na Pré-venda →" : "Conhecer este livro →"}
               </a>
-              <SpotifyEmbed spotifyId={book.spotify.id} kind={book.spotify.kind} label={`Trilha de ${book.title}`} active={visible} />
+              <SpotifyEmbed spotifyId={book.spotify.id} kind={book.spotify.kind} label={`Trilha de ${book.title}`} active={isActive} />
             </div>
           </div>
         </div>
