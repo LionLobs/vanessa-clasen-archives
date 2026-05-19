@@ -292,7 +292,7 @@
     gap: 3rem;
     align-items: center;
     min-width: 100%;
-    animation: marquee 35s linear infinite;
+    animation: marquee 75s linear infinite;
   }
   .marquee:hover .marquee__track {
     animation-play-state: paused;
