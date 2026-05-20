@@ -1,5 +1,6 @@
 import quill from "@/assets/quill-divider.png";
 import vanessaPortrait from "@/assets/vanessa-portrait-hero.jpg";
+import { Award } from "lucide-react";
 
 const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 
@@ -64,7 +65,7 @@ const HeroSection = () => {
           />
 
           <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-3 md:px-4 py-1 mb-5 animate-fade-up backdrop-blur-sm" style={{ animationDelay: "0.25s" }}>
-            <span className="text-sm">🏆</span>
+            <Award className="w-3.5 h-3.5 text-primary" strokeWidth={1.75} />
             <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase">
               Pré-venda aberta · Edição de colecionador
             </span>
@@ -101,9 +102,10 @@ const HeroSection = () => {
               href={PRESALE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-gold-gradient px-7 md:px-9 py-3.5 font-heading text-xs md:text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-gradient px-7 md:px-9 py-3.5 font-heading text-xs md:text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
             >
-              🏆 Garantir meu exemplar
+              <Award className="w-4 h-4" strokeWidth={1.75} />
+              Garantir meu exemplar
             </a>
             <a
               href="#premiado"
