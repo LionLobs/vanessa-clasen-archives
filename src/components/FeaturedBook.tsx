@@ -2,6 +2,7 @@ import mockupGuardia from "@/assets/mockup-guardia.png";
 import mapGuardia from "@/assets/map-guardia.png";
 import quill from "@/assets/quill-divider.png";
 import journeyBg from "@/assets/journey-bg.jpg";
+import featuredBookBg from "@/assets/featured-book-bg.jpg";
 import { Award } from "lucide-react";
 
 const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
@@ -9,8 +10,16 @@ const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 const FeaturedBook = () => {
   return (
     <section id="premiado" className="relative py-16 md:py-20 overflow-hidden">
-      {/* Fundo warm parchment / noir literário */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(35_25%_10%)_0%,hsl(30_20%_5%)_60%,hsl(20_15%_3%)_100%)]" aria-hidden />
+      {/* Imagem de fundo: biblioteca antiga à luz de vela */}
+      <img
+        src={featuredBookBg}
+        alt=""
+        aria-hidden
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover opacity-40 select-none pointer-events-none"
+      />
+      {/* Fundo warm parchment / noir literário sobre a imagem */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(35_25%_10%/0.75)_0%,hsl(30_20%_5%/0.92)_60%,hsl(20_15%_3%/0.98)_100%)]" aria-hidden />
       <div
         className="absolute inset-0 opacity-[0.07] mix-blend-overlay"
         style={{
