@@ -102,6 +102,7 @@ const BookExperience = ({
   onVisibilityChange: (ratio: number) => void;
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -109,8 +110,18 @@ const BookExperience = ({
     if (!el) return;
     const obs = new IntersectionObserver(
       ([entry]) => {
-        setVisible(entry.isIntersecting && entry.intersectionRatio > 0.3);
+        const isVisible = entry.isIntersecting && entry.intersectionRatio > 0.3;
+        setVisible(isVisible);
         onVisibilityChange(entry.intersectionRatio);
+        const v = videoRef.current;
+        if (v) {
+          if (entry.intersectionRatio > 0.15) {
+            const p = v.play();
+            if (p && typeof p.catch === "function") p.catch(() => {});
+          } else {
+            v.pause();
+          }
+        }
       },
       { threshold: [0, 0.15, 0.25, 0.4, 0.55, 0.75, 1] }
     );
@@ -122,13 +133,15 @@ const BookExperience = ({
     <div ref={ref} className="relative min-h-[100svh] md:min-h-screen flex items-center overflow-hidden py-16 md:py-24">
       {/* Video de fundo */}
       <video
+        ref={videoRef}
         src={book.video}
         poster={book.cover}
         autoPlay
         loop
         muted
+        defaultMuted
         playsInline
-        preload="metadata"
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover scale-105"
       />
       {/* Camadas de profundidade */}
