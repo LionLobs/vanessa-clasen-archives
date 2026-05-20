@@ -104,7 +104,7 @@ const FeaturedBook = () => {
               Cada cidade guarda um segredo. Cada segredo, uma página.
             </p>
           </div>
-          <div className="relative max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+          <div className="relative max-w-[220px] sm:max-w-[260px] md:max-w-xs mx-auto">
             {/* Halo dourado */}
             <div className="absolute -inset-6 bg-gold-gradient opacity-15 blur-3xl rounded-full pointer-events-none" aria-hidden />
             {/* Moldura tipo pergaminho antigo */}
