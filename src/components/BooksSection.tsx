@@ -42,7 +42,7 @@ const books = [
     overlayClass: "bg-gradient-to-r from-[hsl(30_20%_5%/0.88)] via-[hsl(35_15%_8%/0.80)] to-[hsl(30_10%_5%/0.70)]",
     synopsis:
       "Manuscritos esquecidos, heranças ocultas e segredos literários se entrelaçam neste romance histórico premiado que atravessa o tempo — revelando que algumas verdades jamais deixam de existir.",
-    award: "🏆 1º lugar — FLIPoços",
+    award: "1º lugar — FLIPoços",
     quote: "“Cada manuscrito é um sussurro do tempo que insiste em ser ouvido.”",
     spotify: { id: "3TPr2Em1i454nDS8UJbaFW", kind: "track" as const },
   },
