@@ -43,7 +43,7 @@ const FeaturedBook = () => {
         </div>
 
         {/* Mockup hero — transparente, sem corte seco */}
-        <div className="relative max-w-sm md:max-w-md mx-auto mb-10 md:mb-14">
+        <div className="relative max-w-[200px] md:max-w-[260px] mx-auto mb-10 md:mb-14">
           {/* Halo dourado atrás da capa */}
           <div className="absolute -inset-8 bg-gold-gradient opacity-20 blur-[100px] rounded-full pointer-events-none" aria-hidden />
           {/* Moldura sutil dourada */}
