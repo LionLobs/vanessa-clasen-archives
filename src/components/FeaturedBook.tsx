@@ -92,8 +92,36 @@ const FeaturedBook = () => {
         </div>
 
         {/* Mapa da jornada */}
-        <div className="mt-20 md:mt-28 max-w-5xl mx-auto">
-          <div className="text-center mb-8">
+        <div className="relative mt-20 md:mt-28 max-w-5xl mx-auto rounded-sm overflow-hidden px-6 md:px-10 py-12 md:py-16">
+          {/* Fundo atmosférico com sombreados */}
+          <div
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(35_30%_14%)_0%,hsl(25_20%_7%)_55%,hsl(20_15%_3%)_100%)]"
+            aria-hidden
+          />
+          {/* Vinheta escura nas bordas */}
+          <div
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,hsl(0_0%_0%/0.7)_100%)] pointer-events-none"
+            aria-hidden
+          />
+          {/* Textura de pergaminho/ruído sutil */}
+          <div
+            className="absolute inset-0 opacity-[0.08] mix-blend-overlay pointer-events-none"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0 0.4  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+            }}
+            aria-hidden
+          />
+          {/* Brilho dourado suave atrás do título */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] bg-gold-gradient opacity-[0.10] blur-[120px] rounded-full pointer-events-none"
+            aria-hidden
+          />
+          {/* Linhas finas decorativas */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" aria-hidden />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" aria-hidden />
+
+          <div className="relative z-10 text-center mb-8">
             <p className="font-elegant text-xs md:text-sm uppercase tracking-[0.3em] text-primary/70 mb-3">
               A Jornada
             </p>
@@ -104,7 +132,7 @@ const FeaturedBook = () => {
               Cada cidade guarda um segredo. Cada segredo, uma página.
             </p>
           </div>
-          <div className="relative max-w-[220px] sm:max-w-[260px] md:max-w-xs mx-auto">
+          <div className="relative z-10 max-w-[220px] sm:max-w-[260px] md:max-w-xs mx-auto">
             {/* Halo dourado */}
             <div className="absolute -inset-6 bg-gold-gradient opacity-15 blur-3xl rounded-full pointer-events-none" aria-hidden />
             {/* Moldura tipo pergaminho antigo */}
