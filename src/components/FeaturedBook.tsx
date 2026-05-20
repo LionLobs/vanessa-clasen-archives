@@ -43,7 +43,7 @@ const FeaturedBook = () => {
           <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-4 md:px-5 py-1.5 mb-4">
             <Award className="w-4 h-4 text-primary" strokeWidth={1.75} />
             <span className="font-body text-xs md:text-sm text-primary font-semibold">
-              1º lugar — 4° Prêmio FLIPoços para Escritores Independentes
+              1º lugar — 4º Prêmio FLIPoços para Escritores Independentes
             </span>
           </div>
           <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground mb-2">
