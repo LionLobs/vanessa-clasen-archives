@@ -64,9 +64,9 @@ const HeroSection = () => {
             style={{ animationDelay: "0.2s" }}
           />
 
-          <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-3 md:px-4 py-1 mb-5 animate-fade-up backdrop-blur-sm" style={{ animationDelay: "0.25s" }}>
-            <Award className="w-3.5 h-3.5 text-primary" strokeWidth={1.75} />
-            <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 bg-background/70 border border-primary/50 rounded-full px-3 md:px-4 py-1.5 mb-5 animate-fade-up backdrop-blur-md shadow-[0_4px_20px_hsl(0_0%_0%/0.6)]" style={{ animationDelay: "0.25s" }}>
+            <Award className="w-3.5 h-3.5 text-primary drop-shadow-[0_1px_3px_hsl(0_0%_0%/0.8)]" strokeWidth={1.75} />
+            <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase [text-shadow:0_1px_4px_hsl(0_0%_0%/0.9)]">
               Pré-venda aberta · Edição de colecionador
             </span>
           </div>
