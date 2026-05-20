@@ -43,6 +43,9 @@ const Footer = () => {
           <p className="font-body text-xs text-muted-foreground">
             © {new Date().getFullYear()} Vanessa Clasen — Todos os direitos reservados.
           </p>
+          <p className="font-body text-xs text-muted-foreground/70 mt-2">
+            Criado por <span className="text-primary/80">lionlobs</span>
+          </p>
         </div>
       </div>
     </footer>
