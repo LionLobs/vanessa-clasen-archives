@@ -1,6 +1,7 @@
 import mockupGuardia from "@/assets/mockup-guardia.png";
 import mapGuardia from "@/assets/map-guardia.png";
 import quill from "@/assets/quill-divider.png";
+import { Award } from "lucide-react";
 
 const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
 
@@ -30,7 +31,7 @@ const FeaturedBook = () => {
 
         <div className="text-center mb-8 md:mb-10">
           <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-4 md:px-5 py-1.5 mb-4">
-            <span className="text-base">🏆</span>
+            <Award className="w-4 h-4 text-primary" strokeWidth={1.75} />
             <span className="font-body text-xs md:text-sm text-primary font-semibold">
               1º lugar — 4° Prêmio FLIPoços para Escritores Independentes
             </span>
@@ -78,9 +79,10 @@ const FeaturedBook = () => {
                 href={PRESALE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gold-gradient px-8 md:px-10 py-3.5 md:py-4 font-heading text-sm md:text-base font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
+                className="inline-flex items-center gap-2 bg-gold-gradient px-8 md:px-10 py-3.5 md:py-4 font-heading text-sm md:text-base font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
               >
-                🏆 Reservar na Pré-venda
+                <Award className="w-4 h-4" strokeWidth={1.75} />
+                Reservar na Pré-venda
               </a>
               <p className="font-elegant text-xs md:text-sm text-foreground/40 italic mt-3">
                 Pré-venda oficial via Benfeitoria — garanta seu exemplar antes do lançamento.
