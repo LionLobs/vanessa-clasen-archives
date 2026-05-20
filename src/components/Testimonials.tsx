@@ -3,19 +3,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Uma narrativa que prende do início ao fim. Vanessa tem o dom raro de transformar palavras em imagens vivas — você sente o cheiro do mar, o peso do silêncio.",
-    author: "Revista Letras & Marés",
-    role: "Crítica Literária",
+    text: "Uma viagem deliciosa em uma narrativa envolvente e delicada. Facilmente somos transportados para uma atmosfera que entrelaça memória, literatura e identidade. Sua escrita é elegante e visualmente rica, revelando uma voz potente que toca, com muita sofisticação, as camadas mais profundas… É uma leitura necessária, marcante e que permanece conosco muito tempo depois de fecharmos o livro.",
+    author: "Júri do Prêmio FLIPoços",
+    role: "A Última Guardiã de Camões",
   },
   {
-    text: "O cuidado artesanal de cada frase é impressionante. Saber que tudo é escrito à mão antes de chegar ao papel impresso torna a experiência ainda mais íntima.",
-    author: "Helena Marques",
-    role: "Leitora — Florianópolis",
+    text: "Vanessa produziu um suspense psicológico envolvente desde a primeira página.",
+    author: "Carlos Stegemann",
+    role: "Jornalista e Editor — Nas Sombras da Lembrança",
   },
   {
-    text: "‘A Última Guardiã de Camões’ é daqueles livros que se lê devagar, com reverência. Uma joia da literatura contemporânea brasileira.",
-    author: "Prêmio FLIPoços",
-    role: "Júri Oficial 2024",
+    text: "…Li como quem acorda de um sonho lírico, tocada pela sensibilidade com que desafia o cânone literário. Mais do que um tributo nostálgico, é uma celebração daquelas que escreveram à sombra da História.",
+    author: "Celina Cheberle",
+    role: "Leitora — A Última Guardiã de Camões",
   },
 ];
 
