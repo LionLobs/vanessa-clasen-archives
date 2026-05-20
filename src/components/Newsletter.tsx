@@ -1,15 +1,25 @@
+import { useState } from "react";
 import quill from "@/assets/quill-divider.png";
-import { MessageCircle, Instagram, BookOpen } from "lucide-react";
+import { MessageCircle, Instagram, BookOpen, Check } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5548999563444";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Olá Vanessa! Gostaria de garantir meu exemplar de 'A Última Guardiã de Camões'."
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 const INSTAGRAM_URL =
   "https://www.instagram.com/vanessaclasen.escritora?igsh=MXJiZGwwaThsMHR6cQ==";
 
+const BOOKS = [
+  { id: "guardia", title: "A Última Guardiã de Camões" },
+  { id: "mar", title: "O Mar Sempre Devolve Seus Mortos" },
+  { id: "sombras", title: "Nas Sombras da Lembrança" },
+] as const;
+
 const Newsletter = () => {
+  const [selected, setSelected] = useState<string>(BOOKS[0].title);
+
+  const message = encodeURIComponent(
+    `Olá Vanessa! Vim pelo site e quero o livro "${selected}".`
+  );
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
   return (
     <section id="reservar" className="relative py-24 overflow-hidden bg-muted/20">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
@@ -25,15 +35,51 @@ const Newsletter = () => {
             Garanta seu <span className="text-gold-gradient">exemplar</span>
           </h2>
           <p className="font-elegant text-lg text-foreground/60 italic leading-relaxed">
-            Fale diretamente com Vanessa pelo WhatsApp e finalize sua reserva
+            Escolha a obra desejada e fale diretamente com Vanessa pelo WhatsApp
             <br className="hidden md:block" />
-            com atendimento pessoal e exclusivo.
+            para finalizar sua reserva com atendimento pessoal.
           </p>
+        </div>
+
+        <div className="max-w-lg mx-auto mb-8">
+          <p className="font-heading text-xs tracking-widest uppercase text-primary/70 mb-3 text-center">
+            Selecione a obra
+          </p>
+          <div className="flex flex-col gap-2">
+            {BOOKS.map((book) => {
+              const isActive = selected === book.title;
+              return (
+                <button
+                  key={book.id}
+                  type="button"
+                  onClick={() => setSelected(book.title)}
+                  className={`group flex items-center justify-between gap-3 px-5 py-3 rounded-sm border text-left transition-all ${
+                    isActive
+                      ? "border-primary bg-primary/10 shadow-gold"
+                      : "border-primary/20 bg-background/40 hover:border-primary/50 hover:bg-primary/5"
+                  }`}
+                >
+                  <span className="font-elegant text-sm md:text-base text-foreground">
+                    {book.title}
+                  </span>
+                  <span
+                    className={`flex items-center justify-center w-5 h-5 rounded-full border ${
+                      isActive
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-primary/40"
+                    }`}
+                  >
+                    {isActive && <Check className="w-3 h-3" strokeWidth={3} />}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto justify-center">
           <a
-            href={WHATSAPP_URL}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-gold-gradient px-7 py-4 font-heading text-sm font-semibold text-primary-foreground tracking-wider uppercase hover:opacity-90 transition-opacity rounded-sm shadow-gold"
