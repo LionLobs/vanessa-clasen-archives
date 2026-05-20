@@ -35,7 +35,7 @@ const Newsletter = () => {
             Garanta seu <span className="text-gold-gradient">exemplar</span>
           </h2>
           <p className="font-elegant text-lg text-foreground/60 italic leading-relaxed">
-            Escolha a obra desejada e fale diretamente com Vanessa pelo WhatsApp
+            Escolha a obra desejada e fale diretamente com Vanessa pelo WhatsApp{" "}
             <br className="hidden md:block" />
             para finalizar sua reserva com atendimento pessoal.
           </p>
