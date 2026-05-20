@@ -25,24 +25,26 @@ const PressGallery = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
-          {shots.map((s, i) => (
-            <figure
-              key={i}
-              className="group relative overflow-hidden rounded-sm border border-primary/15 shadow-xl"
-            >
-              <img
-                src={s.src}
-                alt={s.caption}
-                loading="lazy"
-                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
-              <figcaption className="absolute bottom-0 left-0 right-0 p-3 md:p-4 font-elegant text-xs md:text-sm italic text-foreground/85">
-                {s.caption}
-              </figcaption>
-            </figure>
-          ))}
+        <div className="marquee">
+          <div className="marquee__track" style={{ animationDirection: "reverse", animationDuration: "45s" }}>
+            {[...shots, ...shots, ...shots].map((s, i) => (
+              <figure
+                key={i}
+                className="group relative overflow-hidden rounded-sm border border-primary/15 shadow-xl w-[240px] sm:w-[280px] md:w-[320px] flex-shrink-0"
+              >
+                <img
+                  src={s.src}
+                  alt={s.caption}
+                  loading="lazy"
+                  className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+                <figcaption className="absolute bottom-0 left-0 right-0 p-3 md:p-4 font-elegant text-xs md:text-sm italic text-foreground/85">
+                  {s.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>
