@@ -1,6 +1,7 @@
 import quill from "@/assets/quill-divider.png";
 import vanessaPortrait from "@/assets/vanessa-portrait.jpg";
 import vanessaAward from "@/assets/vanessa-award.jpg";
+import { Award, BookOpen, Medal, type LucideIcon } from "lucide-react";
 
 const AuthoritySection = () => {
   return (
@@ -46,28 +47,28 @@ const AuthoritySection = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
-          {[
+          {([
             {
-              icon: "🥇",
+              icon: Medal,
               title: "1º lugar no FLIPoços",
               desc: "Prêmio para escritores independentes",
             },
             {
-              icon: "🏆",
+              icon: Award,
               title: "2º melhor suspense",
               desc: "Prêmio Book Brasil (2024)",
             },
             {
-              icon: "📚",
+              icon: BookOpen,
               title: "Contos e poemas premiados",
               desc: "Em concursos literários nacionais",
             },
-          ].map((item, i) => (
+          ] as { icon: LucideIcon; title: string; desc: string }[]).map((item, i) => (
             <div
               key={i}
               className="bg-card border border-border rounded-sm p-5 md:p-6 text-center hover:border-primary/40 hover:shadow-gold transition-all duration-300"
             >
-              <span className="text-2xl md:text-3xl mb-2 block">{item.icon}</span>
+              <item.icon className="w-7 h-7 md:w-8 md:h-8 mx-auto mb-3 text-primary" strokeWidth={1.5} />
               <h3 className="font-heading text-sm md:text-base font-bold text-foreground mb-1">{item.title}</h3>
               <p className="font-body text-xs md:text-sm text-muted-foreground">{item.desc}</p>
             </div>
