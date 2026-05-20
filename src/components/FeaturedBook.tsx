@@ -1,6 +1,7 @@
 import mockupGuardia from "@/assets/mockup-guardia.png";
 import mapGuardia from "@/assets/map-guardia.png";
 import quill from "@/assets/quill-divider.png";
+import journeyBg from "@/assets/journey-bg.jpg";
 import { Award } from "lucide-react";
 
 const PRESALE_URL = "https://benfeitoria.com/aultimaguardiadecamoes";
@@ -93,9 +94,17 @@ const FeaturedBook = () => {
 
         {/* Mapa da jornada */}
         <div className="relative mt-20 md:mt-28 max-w-5xl mx-auto rounded-sm overflow-hidden px-6 md:px-10 py-12 md:py-16">
-          {/* Fundo atmosférico com sombreados */}
+          {/* Imagem de fundo: mapa antigo */}
+          <img
+            src={journeyBg}
+            alt=""
+            aria-hidden
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover opacity-55 select-none pointer-events-none"
+          />
+          {/* Camada escura para profundidade */}
           <div
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(35_30%_14%)_0%,hsl(25_20%_7%)_55%,hsl(20_15%_3%)_100%)]"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(25_20%_8%/0.55)_0%,hsl(20_15%_3%/0.85)_100%)]"
             aria-hidden
           />
           {/* Vinheta escura nas bordas */}
