@@ -54,13 +54,6 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-5 md:px-6">
         <div className="max-w-xl lg:max-w-2xl text-left">
-          <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-3 md:px-4 py-1 mb-5 animate-fade-up backdrop-blur-sm">
-            <span className="text-sm">🏆</span>
-            <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase">
-              Pré-venda aberta · Edição de colecionador
-            </span>
-          </div>
-
           <img
             src={quill}
             alt=""
@@ -69,6 +62,13 @@ const HeroSection = () => {
             height={512}
             style={{ animationDelay: "0.2s" }}
           />
+
+          <div className="inline-flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-3 md:px-4 py-1 mb-5 animate-fade-up backdrop-blur-sm" style={{ animationDelay: "0.25s" }}>
+            <span className="text-sm">🏆</span>
+            <span className="font-body text-[10px] md:text-xs text-primary font-semibold tracking-wider uppercase">
+              Pré-venda aberta · Edição de colecionador
+            </span>
+          </div>
 
           <h1
             className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 animate-fade-up [text-shadow:0_2px_24px_hsl(0_0%_0%/0.65)]"
